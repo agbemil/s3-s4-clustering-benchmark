@@ -162,26 +162,6 @@ Rscript run_analysis.R
 The script writes the full benchmark table and comparison figures into
 `results/`.
 
-## Improvements Over the Original Script
-
-The original script contains a broad collection of one-off experiments across
-S-sets, A-sets, Birch sets, G2 sets, DIM sets, and an unbalanced dataset. The
-portfolio version intentionally focuses on S3 and S4 because those are the
-datasets supplied with this project and therefore reproducible.
-
-The refactoring also:
-
-- removes machine-specific `setwd("D:/...")` paths;
-- replaces repeated code with reusable functions;
-- evaluates several clustering paradigms consistently;
-- adds NMI, silhouette, matched accuracy, centroid error, runtime, and noise rate;
-- separates external and internal validation;
-- adds BIC-based mixture-component selection;
-- treats HDBSCAN noise explicitly;
-- saves machine-readable results and publication-quality figures;
-- adds lightweight metric tests;
-- documents dataset provenance and references.
-
 ## Dataset Provenance
 
 The S-sets are part of the clustering benchmark maintained by the
